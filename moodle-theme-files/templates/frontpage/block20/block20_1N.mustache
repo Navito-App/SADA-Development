@@ -1,0 +1,62 @@
+{{!
+    This file is part of Moodle - http://moodle.org/
+
+    Moodle is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    Moodle is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
+}}
+<!-- Newsletter -->
+<div class="newsletter-block pb-5">
+    <div class="container">
+        <div class="newsletter-box">
+            <div class="newsletter-info">
+                <div class="row align-items-center wow fadeInUp" data-wow-delay=".1s">
+                    <div class="col-lg-6">
+                        <div class="item-content mb-2">
+                            <h4 class="heading-description">{{block20nlheader}}</h4>
+                            <span class="section-description mb-20">{{block20nlexplanation}}</span>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <form class="subscribe-from d-flex align-items-center mform" autocomplete="off"
+                            action="./user/contactsitesupport.php"
+                            method="post" accept-charset="utf-8"
+                            data-boost-form-errors-enhanced="1">
+                            <div class="col-lg-7">
+                                <div style="display: none;">
+                                    <input name="sesskey" type="hidden" value="{{sesskey}}">
+                                    <input name="_qf__core_user_form_contactsitesupport_form" type="hidden" value="1">
+                                </div>
+                                <input type="hidden" class="form-control" name="name" id="id_name" value="e-mail address">
+                                <input type="hidden" class="form-control" name="subject" id="id_subject" value="Subscribe">
+                                <input type="hidden" class="form-control" name="message" id="id_messages"
+                                    value="I want you to send the latest updates to my email address.">
+
+                                <input class="from-control" type="email" name="email" id="id_email" value="" 
+                                    placeholder="type your email address" required="">
+                            </div>
+                            <div class="col-lg-5">
+                                <button class="btn btn-primary btn-lg px-4 me-md-2" type="submit" name="submitbutton">
+                                    <span>
+                                        <small>{{#str}} subscribe, mnet {{/str}}</small> 
+                                        <small>{{#str}} subscribe, mnet {{/str}}</small>
+                                    </span>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Newsletter End -->

@@ -1,0 +1,167 @@
+<div class="almond-page-content">
+    <!-- Header Banner -->
+    <section class="almond-block page-banner 
+        {{#frontpagenavchoice2}} page-banner-padding-top {{/frontpagenavchoice2}}">
+        <div class="rounded-3">
+            <div class="page-banner-content">
+                <div class="container">
+                    <div class="banner-image-1" 
+                        {{#page04img}} style="background-image:url({{page04img}});"{{/page04img}}>                   
+                        <div class="row align-items-center">
+                            <div class="col-lg-6">
+                                <ul class="page-breadcrumb unordered-list">
+                                    <li>
+                                        <a href="?">{{#str}}home, moodle {{/str}}</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">{{#str}}pages, lesson {{/str}}</a>
+                                    </li>
+                                    <li>
+                                        {{page04navbar}}
+                                    </li>
+                                </ul>
+                                <h2 class="banner-big-title">{{page04header}}</h2>
+                                <div class="banner-description"> {{page04caption}}</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Header Banner End -->
+    <!-- Icon Box 2 -->
+    {{#page04s1enabled}}
+    <section class="almond-block iconbox-block-2">
+        <div class="container">
+            <div class="text-center text-dark mb-5 wow fadeInUp" data-wow-delay=".1s">
+                <div class="heading-text">
+                   {{page04s1headline}}
+                </div>
+                <h2 class="heading-description">
+                    {{page04s1title}}.
+                </h2>
+            </div>
+            <!-- Row  -->
+            <div class="row">
+                {{#page04s1}}
+                <div class="col-lg-4 col-xs-12 wow fadeInUp">
+                    <div class="card h-100 iconbox-card-2 rounded-3 p-3 mb-4">
+                        <div class="card-body text-dark">
+                            <div class="card-content">
+                                <h4 class="card-title text-dark">{{header}}</h4>
+                                <div class="mt-3 text-dark card-content-desc">
+                                    {{caption}}
+                                </div>
+                                <a class="iconbox-btn-2" href="{{link}}">
+                                    <span class="btn-text-2">{{button}}</span>
+                                    <span class="btn-icon">
+                                        <i class="fa-solid fa-long-arrow-right"></i>
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {{/page04s1}}
+            </div>
+        </div>
+    </section>
+    {{/page04s1enabled}}
+    <!-- Icon Box 2 End -->
+    <!-- Teachers 2 -->
+    <section class="almond-block teacher-block-2">
+        <div class="container">
+            <div class="text-center text-dark mb-5 wow fadeInUp">
+                <div class="heading-text">
+                    {{page04s2header}}
+                </div>
+                <h2 class="heading-description">
+                    {{page04s2caption}}
+                </h2>
+            </div>
+            <!-- Row  -->
+            <div class="row">
+                {{#page04s2}}
+                <div class="col-xl-3 col-lg-4 col-md-6 mb-4 wow fadeInUp">
+                    <div class="card teacher-card h-100">
+                        <div class="teacher-image">
+                            <a href="{{teacherlink}}">
+                                <img src="{{userpictureURL}}" alt="user">
+                            </a>
+                            <ul class="social-profile unordered-list">
+                                <li>
+                                    {{#socialicon1}}
+                                    <a href="{{sociallink1}}" target="_blank"><i class="{{socialicon1}}"></i></a>
+                                    {{/socialicon1}}
+                                </li>
+                                <li>
+                                    {{#socialicon2}}
+                                    <a href="{{sociallink2}}" target="_blank"><i class="{{socialicon2}}"></i></a>
+                                    {{/socialicon2}}
+                                </li>
+                                <li>
+                                    {{#socialicon3}}
+                                    <a href="{{sociallink3}}" target="_blank"><i class="{{socialicon3}}"></i></a>
+                                    {{/socialicon3}}
+                                </li>
+                                <li>
+                                    {{#socialicon4}}
+                                    <a href="{{sociallink4}}" target="_blank"><i class="{{socialicon4}}"></i></a>
+                                    {{/socialicon4}}
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="card-content">
+                            <h4 class="teacher-name">
+                                <a href="{{teacherlink}}">{{teachername}}</a>
+                            </h4>
+                            <div class="teacher-job">{{job}}&nbsp;</div>
+                            {{#page04s2total}}
+                            <ul class="teacher-info unordered-list-center mb-0">
+                                <li>
+                                    <i class="fa-solid fa-people-group"></i>
+                                    <span>{{studentscount}} {{#str}}student, grades{{/str}}</span>
+                                </li>
+                                <li>
+                                    <i class="fa-solid fa-user-graduate"></i> 
+                                    <span>{{coursecount}} {{#str}}courses, admin{{/str}}</span>
+                                </li>
+                            </ul>
+                            {{/page04s2total}}
+                        </div>
+                    </div>
+                </div>
+                {{/page04s2}}
+            </div>
+        </div>
+    </section>
+    <!-- Teachers 2 End -->
+    <!-- Brands -->
+    {{#block19enabled}}
+    <section class="almond-block brands-block mt-0">
+        <div class="container">
+            <div class="text-center text-dark mb-5 wow fadeInUp" data-wow-delay=".1s">
+                <div class="heading-text">
+                    {{block19header}}
+                </div>
+                <h2 class="heading-description">
+                    {{{block19caption}}}
+                </h2>
+            </div>
+            <div class="row g-4 brands-logo unordered-list">
+                {{#block19}}
+                <div class="col-xl-3 col-md-4">
+                    <a href="{{{link}}}">
+                        {{#block19img}}
+                        <img src="{{{block19img}}}" alt="brands-1">
+                        {{/block19img}}  
+                    </a>
+                </div>
+                {{/block19}} 
+            </div>
+        </div>
+    </section>
+    {{/block19enabled}}
+</div>
+<!-- Brands End -->

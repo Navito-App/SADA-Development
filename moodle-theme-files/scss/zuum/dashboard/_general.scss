@@ -1,0 +1,198 @@
+// Button focus none shadow.
+.btn:focus, .btn.focus {
+    outline: 0;
+    box-shadow: none;
+}
+/*
+.form-control,
+.btn {
+    height: initial;
+    padding: 0.7rem 1.5rem;
+}
+*/
+.custom-select {
+    height: initial;
+    padding: 0.7rem 2.5rem 0.7rem 1.5rem;
+}
+.custom-select:focus {
+    color: var(--theme-color-495057);
+    background-color: var(--theme-color-fff);
+    border-color: var(--theme-color-ad2600);
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem var( --theme-color-2d0a00bf);
+}
+.urlselect.text-truncate {
+    overflow: inherit;
+}
+.form-select {
+    .custom-select option {
+        &:nth-child(even) {
+            background-color: var(--color-dl-grey-a);
+        }
+        &:nth-child(odd) {
+            background-color: var(--light);
+        }
+    }
+    .custom-select {
+        height: initial;
+        padding: 0.7rem 2.5rem 0.7rem 1.5rem;
+    }
+}
+/* Edit user h2 none */
+#page-user-editadvanced section[id="region-main"] h2
+{
+    display: none;
+}
+/* Twitter to X. Geçici çözüm. */
+.fa.fa-twitter,
+.bx.bxl-twitter {
+	font-family:sans-serif;
+}
+.fa.fa-twitter,
+.bx.bxl-twitter {
+    &:before {
+        content:"𝕏";
+        font-size:1em;
+    }
+}
+
+/* Dashboard  */
+.secondary-navigation .navigation {
+    border-top: none; 
+    border-bottom: none;
+    font-weight: 700;
+}
+
+#page-my-index .block_myoverview.block {
+    padding: 15px;
+}
+/* Alert message 
+.alert {
+    margin: 15px;
+}
+*/
+/** Class hide/visible */
+.classhide {
+    display: none;
+}
+.classvisible {
+    display: block;
+}
+// Dashboard blocks.
+#block-region-content {
+    h5 {
+        font-weight: 500;
+    }
+}
+// List grup padding.
+.list-group-item  {
+    padding: 1.25rem 1.25rem;
+}
+// Link focus.
+.aalink.focus, .aalink:focus, #page-footer a:not([class]).focus,
+#page-footer a:not([class]):focus, .arrow_link.focus, .arrow_link:focus, 
+a:not([class]).focus, a:not([class]):focus, .activityinstance > a.focus, .activityinstance > a:focus {
+    outline: 0.2rem solid transparent;
+    color: var(--theme-color-212529);
+    background-color: transparent;
+    box-shadow: none;
+    text-decoration: underline;
+}
+// Dashboard my courses.
+.dashboard-card a.coursename {
+    text-decoration: none;
+    font-weight: 700;
+    margin-bottom: 5px;
+    font-size: 16px;
+    color: var(--theme-color-1e1f21);
+}
+.card.dashboard-card {
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -ms-border-radius: 6px;
+    -o-border-radius: 6px;
+    border-radius: 6px;
+    border: 1px solid var(--theme-color-0000000d);
+    -webkit-box-shadow: 0 1px 2px var(--theme-color-0000001a);
+    -moz-box-shadow: 0 1px 2px var(--theme-color-0000001a);
+    box-shadow: 0 1px 2px var(--theme-color-0000001a);
+    transition: all .4s ease-in-out;
+}
+
+#instance-196-header, #instance-201-header, #instance-209-header, #instance-205-header, #instance-208-header, .modal-title {
+    font-weight: 700;
+}
+.calendar-controls .previous, .calendar-controls .next, .calendar-controls .current {
+    font-weight: 700;
+}
+// Dashboard button.
+.btn {
+    font-weight: 700;
+}
+/* Dashboard course card img size.*/
+.dashboard-card-deck {
+    .dashboard-card {
+        .dashboard-card-img {
+            height: $dashboard-card-img-height;
+        }
+    }
+}
+// Block end (*/*) white.
+/*
+#page-admin-setting-themesettingzuum {
+    h3.page-main {
+        color: white;
+        border-bottom: none;
+    }
+}
+*/
+.page-context-header {
+    align-items: center;
+}
+#page-header-headings {
+    padding: 0 15px;
+}
+/* Course left side shadow cancel. */ 
+.drawer.scrolled .drawerheader {
+    box-shadow: none;
+}
+/* Theme settings */
+.settingsform {
+    overflow-x: hidden;
+    padding-right: 4px;
+}
+/* Zuum settings accordion */
+.zuum-acc {
+    .zuum-i-up {
+        display: block;
+    }
+    .zuum-i-down {
+        display: none;
+    }
+    &.collapsed {
+        .zuum-i-down {
+            display: block;
+        }
+        .zuum-i-up {
+            display: none;
+        }
+    }
+}
+/* File picker */
+.moodle-dialogue-bd {
+    height: auto !important;
+}
+/* Right sidebar */
+.block_recentlyaccesseditems .card {
+    margin-top: 5px;
+}
+/* filemaneger.scss */
+.file-picker {
+    .fp-navbar {
+        border-color: var(--theme-color-ddd);
+        border-bottom: 1px solid var(--theme-color-00000020);
+    }
+    .btn-sm {
+        line-height: 1;
+    }
+}

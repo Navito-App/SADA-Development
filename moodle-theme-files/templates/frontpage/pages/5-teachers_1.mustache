@@ -1,0 +1,245 @@
+    <div class="almond-page-content">
+        <!-- Header Banner -->
+        <section class="almond-block page-banner 
+            {{#frontpagenavchoice2}} page-banner-padding-top {{/frontpagenavchoice2}}">
+            <div class="rounded-3">
+                <div class="page-banner-content">
+                    <div class="container">
+                        <div class="banner-image-1"
+                            {{#page05s1enabled}}
+                            {{#page05img}} style="background-image:url({{page05img}});"{{/page05img}}>
+                            <div class="d-xs-block d-sm-block d-md-block d-lg-none w-10">
+                                {{#page05img}} <img src="{{page05img}}" alt="user"> {{/page05img}}
+                            </div>
+                            {{/page05s1enabled}}
+                            {{^page05s1enabled}}
+                            {{#page05userpicture}} style="background-image:url({{page05userpicture}});"{{/page05userpicture}}>
+                            <div class="d-xs-block d-sm-block d-md-block d-lg-none w-10">
+                                {{#page05userpicture}} <img src="{{page05userpicture}}" alt="user"> {{/page05userpicture}}
+                            </div>
+                            {{/page05s1enabled}}
+                            <div class="row align-items-center teacher-5-info">
+                                <div class="col-lg-8">
+                                    <ul class="page-breadcrumb unordered-list">
+                                    <li>
+                                        <a href="?">{{#str}}home, moodle {{/str}}</a>
+                                    </li>
+                                    <li>
+                                        {{page05navbar}}
+                                    </li>
+                                    </ul>
+                                    <h2 class="banner-big-title">{{page05header}}</h2>
+                                    <div class="banner-description">{{page05caption}}</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Header Banner End -->
+        <!-- Instructor Details -->
+        <div class="zuum-instructor-details pb-5">
+            <div class="container">
+                <div class="row">
+                    {{#page04s2}}
+                    <!-- section 1 -->
+                    {{#page05s1enabled}}
+                    <div class="col-lg-4">
+                        <div class="single-instructor-box mb-3">
+                            <div class="image d-flex justify-content-between">
+                                <a href="#">
+                                    <img src="{{userpictureURL}}" alt="user">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-8">
+                        <div class="details-profile">
+                            <div class="content">
+                                <h2 class="title-text">{{#str}}description, moodle{{/str}}</h2>
+                                <div class="zuum-truncate-10 mb-5">
+                                    {{description}}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {{/page05s1enabled}}
+                    <!-- section 2 -->
+                    {{#page05s2enabled}}
+                    <div class="col-xl-4 col-lg-6 single-instructor-box">
+                        <div class="content mt-3">
+                            <div class="mt-1 details-info d-flex justify-content-between">
+                                <div class="text">
+                                    <a href="{{userURL}}" class="text-decoration-none text-black-50">
+                                        <h5>{{teachername}}</h5>        
+                                    </a>
+                                    <p>{{job}}&nbsp;</p>
+                                </div>
+                            </div>
+                            <div class="meta-info mt-3 mb-3 d-flex align-items-center">
+                                <div class="item">
+                                    <i class="fa-solid fa-play"></i>
+                                    {{coursecount}} {{#str}}courses, admin{{/str}}
+                                </div>
+                                <div class="item">
+                                    <i class="fa-solid fa-user"></i>
+                                    {{studentscount}} {{#str}}student, grades{{/str}}
+                                </div>
+                            </div>
+
+                            <div class="instructor-skills">
+                                <h5 class="mb-3">{{#str}}contactus, tool_brickfield{{/str}}</h5>
+                                <ul class="info p-0">
+                                    {{#page05s2phoneshow}}
+                                    {{#phone1}}
+                                    <li class="d-flex">
+                                        <span>{{#str}}phone, moodle{{/str}}:</span>
+                                        <a href="#">{{phone1}}</a>
+                                    </li>
+                                    {{/phone1}}
+                                    {{/page05s2phoneshow}}
+                                    {{#page05s2emailshow}}
+                                    {{#email}}
+                                    <li class="d-flex">
+                                        <span>{{#str}}email, lesson{{/str}}:</span>
+                                        <a href="#">{{email}}</a>
+                                    </li>
+                                    {{/email}}
+                                    {{/page05s2emailshow}}
+                                    <li class="d-flex">
+                                        <span>{{#str}}location, moodle{{/str}}:</span>
+                                        {{country}}
+                                    </li>
+                                </ul>  
+                                <div class="social-share">
+                                    <h5 class="mt-3 mb-3">{{#str}}criteria_3, badges{{/str}}</h5>
+                                    <ul class="social-profile">
+                                        <li>
+                                            {{#socialicon1}}
+                                            <a href="{{sociallink1}}" target="_blank">
+                                                <i class="{{socialicon1}}"></i>
+                                            </a>
+                                            {{/socialicon1}}
+                                        </li>
+                                        <li>
+                                            {{#socialicon2}}
+                                            <a href="{{sociallink2}}" target="_blank">
+                                                <i class="{{socialicon2}}"></i>
+                                            </a>
+                                            {{/socialicon2}}
+                                        </li>
+                                        <li>
+                                            {{#socialicon3}}
+                                            <a href="{{sociallink3}}" target="_blank">
+                                                <i class="{{socialicon3}}"></i>
+                                            </a>
+                                            {{/socialicon3}}
+                                        </li>
+                                        <li>
+                                            {{#socialicon4}}
+                                            <a href="{{sociallink4}}" target="_blank">
+                                                <i class="{{socialicon4}}"></i>
+                                            </a>
+                                            {{/socialicon4}}
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {{/page05s2enabled}}
+                    <div class="col-xl-8 col-lg-6">
+                        <div class="profile-scores mt-3 mb-3"
+                            {{#page05counterbgimg}} style="background-image:url({{page05counterbgimg}});"{{/page05counterbgimg}}>
+                            <div class="row g-2">
+                                <div class="col-md-4 col-lg-4">
+                                    <div class="item-score">
+                                        <h2><span class="counter-zuum" data-value="{{page05categorycount}}">0</span> +</h2>
+                                        <p>{{#str}}total, moodle{{/str}} {{#str}}category, moodle{{/str}}</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 col-lg-4">
+                                    <div class="item-score">
+                                        <h2><span class="counter-zuum" data-value="{{page05coursecount}}"=>0</span> +</h2>
+                                        <p>{{#str}}total, moodle{{/str}} {{#str}}course, moodle{{/str}}</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 col-lg-4">
+                                    <div class="item-score">
+                                        <h2><span class="counter-zuum" data-value="{{page05studentcount}}">0</span> +</h2>
+                                        <p>{{#str}}total, moodle{{/str}} {{#str}}defaultcoursestudent, moodle{{/str}}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        {{#yesskill}}
+                        <div class="skills-bar mb-5">
+                            <h2 class="title-text">{{#str}}taxonomy_skill, competency{{/str}}</h2>
+                            <div class="skill-progress">
+                                {{#skillname1}}
+                                <div class="progress-section">
+                                    <div class="meta-info d-flex justify-content-between">
+                                        <p>{{skillname1}}</p>
+                                        <p>{{skillvalue1}}%</p>
+                                    </div>
+                                    <div class="progress">
+                                        <div class="progress-bar wow slideInLeft" role="progressbar" 
+                                            aria-valuenow="{{skillvalue1}}" aria-valuemin="0" aria-valuemax="{{skillvalue1}}" 
+                                            style="width: {{skillvalue1}}%">
+                                        </div>
+                                    </div>
+                                </div>
+                                {{/skillname1}}
+                                {{#skillname2}}
+                                <div class="progress-section">
+                                    <div class="meta-info d-flex justify-content-between">
+                                        <p>{{skillname2}}</p>
+                                        <p>{{skillvalue2}}%</p>
+                                    </div>
+                                    <div class="progress">
+                                        <div class="progress-bar wow slideInLeft" role="progressbar" 
+                                        aria-valuenow="{{skillvalue2}}" aria-valuemin="0" aria-valuemax="{{skillvalue2}}" 
+                                        style="width: {{skillvalue2}}%">
+                                        </div>
+                                    </div>
+                                </div>
+                                {{/skillname2}}
+                                {{#skillname3}}
+                                <div class="progress-section">
+                                    <div class="meta-info d-flex justify-content-between">
+                                        <p>{{skillname3}}</p>
+                                        <p>{{skillvalue3}}%</p>
+                                    </div>
+                                    <div class="progress">
+                                        <div class="progress-bar wow slideInLeft" role="progressbar" 
+                                        aria-valuenow="{{skillvalue3}}" aria-valuemin="0" aria-valuemax="{{skillvalue3}}"
+                                        style="width: {{skillvalue3}}%">
+                                        </div>
+                                    </div>
+                                </div>
+                                {{/skillname3}}
+                                {{#skillname4}}
+                                <div class="progress-section">
+                                    <div class="meta-info d-flex justify-content-between">
+                                        <p>{{skillname4}}</p>
+                                        <p>{{skillvalue4}}%</p>
+                                    </div>
+                                    <div class="progress">
+                                        <div class="progress-bar wow slideInLeft" role="progressbar" 
+                                        aria-valuenow="{{skillvalue4}}" aria-valuemin="0" 
+                                        aria-valuemax="{{skillvalue4}}" style="width: {{skillvalue4}}%">
+                                        </div>
+                                    </div>
+                                </div>
+                                {{/skillname4}}
+                            </div>
+                        </div>
+                        {{/yesskill}}
+                    </div>
+                    {{/page04s2}}
+                </div>
+            </div>
+        </div>
+    <div>
+    <!-- Instructor Details End -->

@@ -1,0 +1,98 @@
+{{!
+    This file is part of Moodle - http://moodle.org/
+
+    Moodle is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    Moodle is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
+}}
+{{!
+    @template theme_zuum/columns1
+
+    zuum 1 column layout template.
+
+    Context variables required for this template:
+    * sitename - The name of the site
+    * output - The core renderer for the page
+    * bodyattributes - attributes for the body tag as a string of html attributes
+
+    Example context (json):
+    {
+        "sitename": "Moodle",
+        "output": {
+            "doctype": "<!DOCTYPE html>",
+            "page_title": "Test page",
+            "favicon": "favicon.ico",
+            "main_content": "<h1>Headings make html validators happier</h1>"
+         },
+         "bodyattributes":""
+    }
+}}
+
+{{> theme_zuum/frontpage/head }}
+
+<body {{{ bodyattributes }}}>
+{{> core/local/toast/wrapper}}
+<!-- Start Header Area -->
+    {{#frontpagenavchoice1}}
+        {{> theme_zuum/frontpage/header/header1}}
+    {{/frontpagenavchoice1}}
+    {{#frontpagenavchoice2}}
+        {{> theme_zuum/frontpage/header/header2}}
+    {{/frontpagenavchoice2}}
+    {{#frontpagenavchoice3}}
+        {{> theme_zuum/frontpage/header/header3}}
+    {{/frontpagenavchoice3}}
+<!-- End Header Area -->
+    <!-- Start Slider Area  -->
+    {{> theme_zuum/frontpage/slider/slider}}
+    <!-- End Slider Area -->
+    <!-- Start section -->
+    {{> theme_zuum/frontpage/section/section }} 
+    <!-- End section -->
+    <!-- PAGES -->  
+    {{#pages}}
+        {{> theme_zuum/frontpage/pages/pages}}
+    {{/pages}}
+
+<!-- Start footer -->
+    {{^pages}}<div class="home-page">{{/pages}}
+    {{> theme_zuum/frontpage/block20/block20}}
+    {{^pages}}</div>{{/pages}}
+<!-- End footer -->
+<!--   Scroll Top   -->
+<button class="scrollToTop">
+    <span id="progress-bar">
+        <svg width="48" height="48" viewBox="-5 -5 60 60" fill="none">
+        <path stroke="#006BFF" stroke-width="2" d="M0.5,25a24.5,24.5 0 1,0 49,0a24.5,24.5 0 1,0 -49,0"></path>
+        </svg>
+    </span>
+</button>
+<!--   Scroll Top End  -->
+<!-- Aside Bar mobil -->    
+{{> theme_zuum/frontpage/header_mobil }}
+
+{{> theme_zuum/frontpage/theme}}
+{{> theme_zuum/frontpage/setup}}
+
+<script>
+    new WOW().init();
+</script>
+</body>   
+</html>
+
+{{#js}}
+M.util.js_pending('theme_boost/loader');
+require(['theme_boost/loader', 'theme_boost/drawer'], function(Loader, Drawer) {
+    Drawer.init();
+    M.util.js_complete('theme_boost/loader');
+});
+{{/js}}

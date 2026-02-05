@@ -1,0 +1,72 @@
+{{!
+    This file is part of Moodle - http://moodle.org/
+
+    Moodle is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    Moodle is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
+}}
+<!-- Stats Counter -->
+<div class="stats-counter-block">
+    <div class="stats-counter">
+        <div class="container">
+            <div class="stats-scores">
+                <div class="row">
+                    <div class="col-xl-3 col-lg-6 col-md-6">
+                        <div class="stats-item-score mb-5">
+                            <div class="stats-icon">
+                                <img src="{{block04img1}}" alt="stats-icon">
+                            </div>
+                            <h2>
+                                <span class="counter-zuum" data-value="{{block04totalcategories}}">0</span>
+                            </h2>
+                            <p>{{#str}}total, moodle{{/str}} {{#str}}category, moodle{{/str}}</p>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-6 col-md-6">
+                        <div class="stats-item-score mb-5">
+                            <div class="stats-icon">
+                                <img src="{{block04img2}}" alt="stats-icon">
+                            </div>
+                            <h2>
+                                <span class="counter-zuum" data-value="{{block04totalcourse}}">0</span>
+                            </h2>
+                            <p>{{#str}}total, moodle{{/str}} {{#str}}course, moodle{{/str}}</p>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-6 col-md-6">
+                        <div class="stats-item-score mb-5">
+                            <div class="stats-icon">
+                                <img src="{{block04img3}}" alt="stats-icon">
+                            </div>
+                            <h2>
+                                <span class="counter-zuum" data-value="{{block04totalteacher}}">0</span>
+                            </h2>
+                            <p>{{#str}}total, moodle{{/str}} {{#str}}defaultcourseteacher, moodle{{/str}}</p>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-6 col-md-6">
+                        <div class="stats-item-score mb-5">
+                            <div class="stats-icon">
+                                <img src="{{block04img4}}" alt="stats-icon">
+                            </div>
+                            <h2>
+                                <span class="counter-zuum" data-value="{{block04totalstudent}}">0</span>
+                            </h2>
+                            <p>{{#str}}total, moodle{{/str}} {{#str}}defaultcoursestudent, moodle{{/str}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> 
+<!-- Stats Counter End -->

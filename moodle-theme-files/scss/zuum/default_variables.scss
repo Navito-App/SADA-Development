@@ -1,0 +1,66 @@
+// Almond special additions.
+// Fonts
+//$rfs-base-font-size: 0.9rem !default;
+//$headings-font-weight:  400 !default;
+
+// Tables
+//$table-accent-bg:             rgba($black, .03) !default;
+
+// Options
+//$enable-responsive-font-sizes: true !default;
+
+// Body
+//$body-color:    $gray-900 !default;
+
+// Navbar
+//$navbar-dark-hover-color:           rgba($white, 1) !default;
+//$navbar-light-color:                rgba($black, 0.6) !default;
+//$navbar-light-hover-color:          rgba($black, .9) !default;
+
+$navbar-height: 70px !default;
+$navbar-font-weight: 500 !default;
+$navbar-font-size: 1.0625rem !default;
+//$navbar-dark-color:                 rgba($white, .8) !default;
+//$navbar-dark-hover-color:           rgba($white, 1) !default;//rgba($white, 1) !default;
+//$navbar-light-color:                rgba($black, 0.6) !default;
+//$navbar-light-hover-color:          rgba($black, .9) !default;
+// Breadcrumbs
+//$breadcrumb-padding-x:              0 !default;
+//$breadcrumb-item-padding:           .5rem !default;
+//$breadcrumb-bg:                     transparent !default;
+//$breadcrumb-divider: "/" !default;
+//$breadcrumb-divider-rtl: "/" !default;
+
+// Alerts
+//$alert-border-width:                0 !default;
+//$card-group-margin: .25rem;
+
+// Toasts
+//$toast-color:                       $white !default;
+//$toast-background-color:            rgba($gray-900, .95) !default;
+//$toast-header-color:                $gray-100 !default;
+//$toast-header-background-color:     rgba($white, .1) !default;
+
+// Custom control size
+//$custom-control-indicator-size: 1.25rem;
+//$input-btn-focus-color: rgba($primary, .75) !default;
+
+//$activity-item-border-radius: 0.5rem !default;
+
+// Template color.
+//$navbarbackcolor:       $white  !default;
+//$navbarlinkcolor:       $gray-900  !default;
+//$navbarlinkhovercolor:  $gray-500  !default;
+$footerbackcolor:       #4272d7 !default;
+
+// İmg height.
+$single-course-img-height   : 550px !default;
+$single-blog-img-height     : 550px !default;
+$course-category-img-height : 300px !default;
+$dashboard-card-img-height  : 11.25rem !default;
+
+// Boost variables.
+$course-content-maxwidth:   1400px !default;
+$input-btn-padding-y    :   1rem !default;
+$input-btn-padding-x    :   1.5rem !default;
+$card-deck-margin       :   0.938rem !default;

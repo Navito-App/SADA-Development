@@ -1,0 +1,70 @@
+// Convert a hex value to comma-delimited rgb values
+// In: #000
+// Out: 0,0,0
+
+@function hexToRGB($hex) {
+    @return red($hex), green($hex), blue($hex);
+}
+// Theme opasite color.
+$zuum-theme-color : #1f1d0d;
+:root {
+    --login-background-img: " ";
+    --navbar-color: #{$navbarbackcolor};
+    --theme-color: #{$zuum-theme-color};
+    --theme-color-rgba: #{hexToRGB($zuum-theme-color)};
+    --theme-color-ops-1: rgba(var( --theme-color-rgba ), 0.1);
+    --theme-color-ops-2: rgba(var( --theme-color-rgba ), 0.2);
+    --theme-color-ops-3: rgba(var( --theme-color-rgba ), 0.3);
+    --theme-color-ops-4: rgba(var( --theme-color-rgba ), 0.4);
+    --theme-color-ops-5: rgba(var( --theme-color-rgba ), 0.5);
+    --theme-color-ops-6: rgba(var( --theme-color-rgba ), 0.6);
+    --theme-color-ops-7: rgba(var( --theme-color-rgba ), 0.7);
+    --theme-color-ops-8: rgba(var( --theme-color-rgba ), 0.8);
+    --theme-color-ops-9: rgba(var( --theme-color-rgba ), 0.9);
+    --theme-color-fff: #fff;
+    --theme-color-ffffff: #ffffff;
+    --theme-color-f1f1f1: #f1f1f1;
+    --theme-color-d2d2d2: #d2d2d2;
+    --theme-color-f6f9fc: #f6f9fc;
+    --theme-color-e9ecef: #e9ecef;
+    --theme-color-dee2e6: #dee2e6;
+    --theme-color-0000ff: #0000ff;
+    --theme-color-00000020: #00000020;
+    --theme-color-00000026: #00000026;
+    --theme-color-f8f9fa: #f8f9fa;
+    --theme-color-e4e8f0: #e4e8f0;
+    --theme-color-0000000d: #0000000d;
+    --theme-color-0000001a: #0000001a;
+    --theme-color-424242: #424242;
+    --theme-color-bbb: #bbb;
+    --theme-color-ccc: #ccc;
+    --theme-color-ddd: #ddd;
+    --theme-color-eee: #eee;
+    --theme-color-909296: #909296;
+    --theme-color-0000000a: #0000000a;
+    --theme-color-1f1d0d: var(--theme-color);
+    --theme-color-c8c8c8: #c8c8c8;
+    --theme-color-ffd32b: #ffd32b;
+    --theme-color-ffda47: #ffda47;
+    --theme-color-444: #444;
+    --theme-color-495057: #495057;
+    --theme-color-ad2600: #ad2600;
+    --theme-color-2d0a00bf: #2d0a00bf;
+    --theme-color-212529: #212529;
+    --theme-color-1e1f21: #1e1f21;
+    --theme-color-f9f9f9: #f9f9f9;
+    --theme-color-32325d1a: #32325d1a;
+    --theme-color-32325d26: #32325d26;
+    --theme-color-51666C: #51666C;
+    --theme-color-ff7510: #ff7510;
+    --theme-color-f7ff62: #f7ff62;
+    --theme-color-f9f9f9ab: #f9f9f9ab;
+    --theme-color-a9a9a9: #a9a9a9;
+    --theme-color-f6f6f6: #f6f6f6;
+    --theme-color-f2f2f2: #f2f2f2;
+    --theme-color-f2d911: #f2d911;
+    --theme-color-f8f7f0: #f8f7f0;
+    --theme-color-0001110D: #0001110D;
+    --almond-block-color: var(--theme-color);
+    --zm-footer-bg-color: var(--almond-block-color);
+}

@@ -1,0 +1,312 @@
+<!-- Header Banner -->
+<div class="almond-page-content">
+    <div class="almond-block page-banner 
+        {{#frontpagenavchoice2}} page-banner-padding-top {{/frontpagenavchoice2}}">
+        <div class="rounded-3">
+            <div class="page-banner-content">
+                <div class="container">
+                    <div class="banner-image-1" style="background-image:url({{page03img}});">                   
+                        <div class="row align-items-center">
+                            <div class="col-lg-8">
+                                <ul class="page-breadcrumb unordered-list">
+                                    <li>
+                                        <a href="?">{{#str}}home, moodle{{/str}}</a>
+                                    </li>
+                                    <li>
+                                        <a href="?zuumpage=2">{{#str}}course, moodle{{/str}}</a>
+                                    </li>
+                                    <li>
+                                        {{page03navbar}}
+                                    </li>
+                                </ul>
+                                <h2 class="banner-big-title">
+                                    {{#shortentext}} 75, {{page03header}} {{/shortentext}}
+                                </h2>
+                                <div class="banner-description">
+                                    {{#shortentext}} 500, {{{page03caption}}} {{/shortentext}}
+                                </div>
+                                {{#page03enrollbutton}}
+                                <div class="btn-wrap d-grid gap-2 d-md-flex justify-content-md-start">
+                                    <a class="btn btn-primary btn-lg px-4 me-md-2" href="{{page03enrollbuttonlink}}">
+                                        <span>
+                                            <small>{{page03enrollbutton}}</small> 
+                                            <small>{{page03enrollbutton}}</small>
+                                        </span>
+                                    </a>
+                                </div>
+                                {{/page03enrollbutton}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Header Banner End -->
+    <!-- Course Details -->
+    <div class="zuum-courses-details pb-5">
+        <div class="container">
+                <div class="row">
+                    <div class="col-lg-8">
+                        <div class="single-course-desc mb-5">
+                            <div class="single-course-image position-relative">
+                                <img src="{{page03_course_imgurl}}" alt="zuum image">
+                                <a class="single-course-category" href="#">{{page03_course_category}}</a>
+                            </div>
+                            <div class="single-course-content">
+                                <div class="user-details">
+                                    <div class="info-item d-flex align-items-center">
+                                        {{#page03_teacher}}
+                                        <div class="teacher-name mb-0 me-2" data-bs-toggle="tooltip" data-placement="right" 
+                                                title="{{#str}}defaultcourseteacher, moodle{{/str}} : {{teachername}}" >
+                                            <img src="{{userpicture}}" alt="image">
+                                        </div>
+                                        {{/page03_teacher}}
+                                    </div>
+                                </div>
+                                <h2 class="course-name">
+                                    {{#shortentext}} 90, {{page03_course_fullname}} {{/shortentext}}
+                                </h2>
+                            </div>
+                            
+                            <div class="course-details-wapper">
+                                <ul class="nav course-tab" role="tablist">
+                                    <li class="nav-item m-2" role="presentation">
+                                        <button id="course-overview-tab" class="nav-link active" data-bs-toggle="tab"
+                                            data-bs-target="#course-overview" type="button" 
+                                            role="tab" aria-controls="course-overview" aria-selected="true">
+                                            <i class="fa-solid fa-eye"></i> 
+                                            {{#str}}overview, group{{/str}}
+                                        </button>
+                                    </li>
+                                    <li class="nav-item m-2" role="presentation">
+                                        <button id="course-inst-tab" class="nav-link" data-bs-toggle="tab" 
+                                            data-bs-target="#course-inst" type="button" 
+                                            role="tab" aria-controls="course-inst" aria-selected="false" tabindex="-1">
+                                            <i class="fa-solid fa-star"></i>
+                                            {{#str}}comments, moodle{{/str}}
+                                        </button>
+                                    </li>
+                                    <li class="nav-item m-2" role="presentation">
+                                        <button id="course-reviews-tab" class="nav-link" data-bs-toggle="tab"
+                                            data-bs-target="#course-reviews" type="button" 
+                                            role="tab" aria-controls="course-reviews" aria-selected="false" tabindex="-1">
+                                            <i class="fa-solid fa-user"></i>
+                                            {{#str}}defaultcourseteacher, moodle{{/str}}
+                                        </button>
+                                    </li>
+                                </ul>
+                                <div class="tab-content" id="course-tabContent">
+                                    <!-- overview Tab -->
+                                    <div class="tab-pane fade show active" id="course-overview" role="tabpanel" 
+                                        aria-labelledby="course-overview-tab">
+                                        <div class="overview-content mb-3">
+                                            <h3 class="mb-4">{{#str}}description, moodle{{/str}}</h3>
+                                            <span>
+                                                {{{page03_course_summary}}}
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <!-- Reviews Tab -->
+                                    <div class="tab-pane fade" id="course-inst" role="tabpanel" 
+                                        aria-labelledby="course-inst-tab">
+                                        <div class="student-review-section">
+                                            <div class="comments-area">
+                                                <h3 class="comments-title">
+                                                    {{#str}}emojicategoryrecent, moodle{{/str}} {{#str}}comments, moodle{{/str}}
+                                                </h3>
+                                                <ol class="comment-list">
+                                                    {{#page03_comment}} 
+                                                    <li class="comment">
+                                                        <div class="comment-slide">
+                                                            <article class="comment-body">
+                                                                <footer class="comment-meta">
+                                                                    <div class="comment-author">
+                                                                        <img src="{{userimg}}" class="avatar" alt="image">
+                                                                    </div>
+                                                                    <div class="comment-metadata">
+                                                                        <h4 class="name">{{username}}</h4>
+                                                                        <span>{{timecreated}}</span>
+                                                                    </div>
+                                                                </footer>
+                                                                <div class="comment-content">
+                                                                    {{{content}}}
+                                                                </div>
+                                                            </article>
+                                                        </div>
+                                                    </li>
+                                                    {{/page03_comment}} 
+                                                </ol>
+                                                <div class="comment-respond">
+                                                    <h3 class="comment-reply-title">
+                                                        {{#str}}replypostdiscussion, forum{{/str}}
+                                                    </h3>
+                                                    <div class="comment-form">
+                                                        <form autocomplete="off" action="./user/contactsitesupport.php"
+                                                                method="post" accept-charset="utf-8" class="mform"
+                                                                data-boost-form-errors-enhanced="1">
+                                                            <div style="display: none;">
+                                                                <input name="sesskey" type="hidden" value="{{sesskey}}">
+                                                                <input name="_qf__core_user_form_contactsitesupport_form" type="hidden" value="1">
+                                                            </div>
+                                                            <div class="row">
+                                                                <div class="col-md-6">
+                                                                    <div class="input-group mb-3">
+                                                                        <input type="text" name="name" placeholder="{{#str}}fullname, moodle{{/str}}" 
+                                                                            class="form-control form-control-custom style_2" autocomplete="off">
+                                                                        <i class="fa-solid fa-user-large"></i>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-6">
+                                                                    <div class="input-group mb-3">
+                                                                        <input type="email" name="email" placeholder="{{#str}}email, moodle{{/str}}" 
+                                                                            class="form-control form-control-custom style_2" autocomplete="off">
+                                                                        <i class="fa-solid fa-envelope"></i>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-12">
+                                                                    <div class="input-group mb-3">
+                                                                        <input type="text"  name="subject" placeholder="{{#str}} subject, core {{/str}}"
+                                                                        class="form-control form-control-custom style_2" autocomplete="off">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-12">
+                                                                    <div class="input-group mb-3">
+                                                                        <textarea rows="5" name="message" placeholder="{{#str}}writeamessage, message{{/str}}" 
+                                                                            class="form-control form-control-custom style_2" autocomplete="off"></textarea>
+                                                                        <i class="fa-solid fa-pencil"></i>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-12">
+                                                                    <button type="submit" name="submit" class="btn-wrap d-grid d-md-flex justify-content-md-start btn btn-dark">
+                                                                        {{#str}}sendmessage, message{{/str}}
+                                                                    </button>
+                                                                </div>
+                                                            </div>
+                                                        </form>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Instructor Tab -->
+                                    <div class="tab-pane fade" id="course-reviews" role="tabpanel" aria-labelledby="course-reviews-tab">
+                                        <div class="instructor-sidebar">
+                                            {{#page03_teacher}}
+                                            <div class="row g-2 mb-5">
+                                                <div class="col-lg-4 col-md-4">
+                                                    <div class="image">
+                                                        <img src="{{userpicture}}" alt="image">
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-8 col-md-8">
+                                                    <div class="content">
+                                                        <div class="instructor-content mt-3">
+                                                            <a href="{{teacherlink}}">
+                                                                <h3>{{teachername}}</h3>
+                                                            </a>
+                                                            <div class="meta-info d-flex justify-content-between align-items-center text-uppercase">
+                                                                <div>{{job}}</div>
+                                                            </div>
+                                                            <div class="instructor-info">
+                                                                <ul class="d-flex">
+                                                                    <li>
+                                                                        <span><i class="fa-solid fa-play"></i></span> 
+                                                                        {{coursecount}} {{#str}}course, moodle{{/str}}
+                                                                    </li>
+                                                                    <li>
+                                                                        <span><i class="fa-solid fa-user"></i></span>
+                                                                        {{studentscount}} {{#str}}student, grades{{/str}}
+                                                                    </li>
+                                                                </ul>
+                                                                <div class="instructor-about">
+                                                                    {{#shortentext}} 250, {{{description}}} {{/shortentext}}
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            {{/page03_teacher}}
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="single-course-sidebar mb-5">
+                            <div class="course-widget">
+                                <div class="sidebar-content">
+                                    <div class="meta-info d-flex align-items-center justify-content-between mb-3">
+                                        <h2>{{page03_course_cost}}{{page03_course_currency}}</h2>
+                                    </div>
+                                    <h4 class="mb-5">{{#str}}core-course-content, search{{/str}} : </h4>
+                                    <ul class="courses-details">
+                                        {{#page03_course_courseduration}}
+                                        <li>
+                                            <div class="icon">
+                                                <i class="fa-regular fa-clock"></i>
+                                                {{#str}}courseduration, moodle{{/str}}
+                                            </div> 
+                                            <strong>{{page03_course_courseduration}}</strong>
+                                        </li>
+                                        {{/page03_course_courseduration}}
+                                        <li>
+                                            <div class="icon">
+                                                <i class="fa-solid fa-list"></i>
+                                                {{#str}}category, moodle{{/str}}
+                                            </div> 
+                                            <strong>{{page03_course_category}}</strong>
+                                        </li>
+                                        <li>
+                                            <div class="icon">
+                                                <i class="fa-regular fa-user"></i> 
+                                                {{#str}}existingstudents, moodle{{/str}}
+                                            </div> 
+                                            <strong>{{page03_course_studentscount}}</strong>
+                                        </li>
+                                        <li>
+                                            <div class="icon">
+                                                <i class="fa-regular fa-pen-to-square"></i>
+                                                {{#str}}collastupdated, calendar{{/str}}
+                                            </div> 
+                                            <strong>{{page03_course_update}}</strong>
+                                        </li>
+                                        {{#page03_course_skilllevel}}
+                                        <li>
+                                            <div class="icon">
+                                                <i class="fa-solid fa-sliders"></i>
+                                                {{#str}}taxonomy_skill, competency{{/str}}
+                                                {{#str}}taxonomy_level, competency{{/str}}
+                                            </div> 
+                                            <strong>{{page03_course_skilllevel}}</strong>
+                                        </li>
+                                        {{/page03_course_skilllevel}}
+                                        {{#page03_course_lang}}
+                                        <li>
+                                            <div class="icon">
+                                                <i class="fa-solid fa-language"></i>
+                                                {{#str}}language, moodle{{/str}}
+                                            </div> 
+                                            <strong>{{page03_course_lang}}</strong>
+                                        </li>
+                                        {{/page03_course_lang}}
+                                    </ul>
+                                    <div class="btn-wrap d-grid d-md-flex justify-content-md-start">
+                                        <a class="btn btn-primary" href="{{page03_course_courselink}}">
+                                            <span>
+                                                <small>{{#str}}enrol, enrol{{/str}} {{#str}}course, moodle{{/str}}</small> 
+                                                <small>{{#str}}enrol, enrol{{/str}} {{#str}}course, moodle{{/str}}</small>
+                                            </span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </div>
+</div>    
+<!-- Course Details End -->

@@ -1,0 +1,76 @@
+{{!
+    This file is part of Moodle - http://moodle.org/
+
+    Moodle is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    Moodle is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
+}}
+<!-- Blog -->
+<div class="almond-block blog-block">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col col-lg-5">
+                <div class="text-dark wow fadeInUp" data-wow-delay=".1s">
+                    <div class="heading-text">
+                        {{block11header}}
+                    </div>
+                    <h2 class="heading-description">
+                        {{block11caption}}
+                    </h2>
+                </div>
+            </div>
+            <div class="col col-lg-7 d-none d-lg-flex justify-content-end">
+                <div class="btn-wrap p-0">
+                    <a class="btn border-dark" href="blog">
+                        <span>
+                            <small>{{#str}}all, moodle{{/str}} {{#str}}blog, blog{{/str}}</small> 
+                            <small>{{#str}}all, moodle{{/str}} {{#str}}blog, blog{{/str}}</small>
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            {{#block11}}
+            <div class="col-xl-4 col-md-6 col-sm-12 mb-4">
+                <div class="card h-100 blog-card">
+                    <div class="blog-image">
+                        <a href="{{postURL}}">
+                            <img src="{{imgurl}}" alt="blog">
+                        </a>
+                        <div class="d-flex align-items-center justify-content-between">
+                            <div class="blog-category-list unordered-list blog-block-tag">
+                                {{{tag}}}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h4 class="card-title">
+                            <a href="{{postURL}}">
+                                {{#shortentext}} 75, {{{subject}}} {{/shortentext}}
+                            </a>
+                        </h4>
+                    </div>
+                    <a class="btn-unfill pt-3 pb-3" href="{{postURL}}">
+                        <span class="btn-text">{{#str}}read, logstore_database{{/str}} {{#str}}blog, blog{{/str}}</span>
+                        <span class="btn-icon">
+                            <i class="fa-solid fa-long-arrow-right"></i>
+                            <i class="fa-solid fa-long-arrow-right"></i>
+                        </span>
+                    </a>
+                </div>
+            </div>
+            {{/block11}}
+        </div>
+    </div>
+</div>
+<!-- Blog End -->

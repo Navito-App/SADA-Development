@@ -1,0 +1,94 @@
+/*-----------------------
+  Pages scss.
+-------------------------*/
+/*-----------------------
+  Pages 2 Course filter
+-------------------------*/
+.page02-1,
+.page02-2 {
+    .coursefilterdiv {
+        display: none;
+        // transition: ease-in-out 0.3s;
+        transition: 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+    }
+
+    .show {
+        //transition: ease-in-out 0.3s;
+        transition: 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+        display: block;
+    }
+
+    .btn {
+        border: none;
+        outline: none;
+        padding: 12px 16px;
+        background-color: var(--theme-color-f1f1f1);
+        cursor: pointer;
+        border-radius: 5px;
+        font-size: medium;
+        font-weight: 500;
+        &:hover {
+            background-color: var(--theme-color-ddd);
+        }
+    }
+    .btn.fltactive {
+        background-color: var( --theme-color );
+        color: white;
+        &:hover {
+            background-color: var( --theme-color-ops-7 ) !important;
+            color: white !important;
+        }
+    }
+
+    .card {
+        // transition: all 0.3s ease-in-out;
+        transition: 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+        img {
+            height: 250px;
+            object-fit: cover;
+        }
+
+        .card-footer {
+            border-top: none;
+            span, i {
+                font-weight: 500;
+            }
+        }
+    }
+
+    .nav-pills-bg-soft {
+        background-color: rgba(6, 106, 201, 0.1);
+        padding: 0.625rem 0;
+        border-radius: 0.625rem;
+    }
+
+
+
+    @include media-breakpoint-down(sm) {
+        .btn {
+            font-size: small;
+        }
+    }
+    @include media-breakpoint-up(lg) {
+        #btncontainer {
+            button.btn {
+                display: flex;
+                margin-bottom: 1rem !important;
+                text-align: left;
+                align-items: baseline;
+                justify-content: space-between;
+            }
+            .category-border {
+                display: flex;
+                flex-direction: column;
+                padding: 1rem;
+                border: 2px solid var( --theme-color-d2d2d2);
+                border-radius: 8px;
+                padding-bottom: 0;
+            }
+        }
+        .btn .badge {
+            float: right;
+        }
+    }
+}

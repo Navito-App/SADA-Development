@@ -1,0 +1,46 @@
+{{!
+    This file is part of Moodle - http://moodle.org/
+
+    Moodle is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    Moodle is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
+}}
+{{#block07enabled}}
+<section id="block07" class="block07 almond-block course-block">
+    {{#block07desing1}}
+        {{#block07slide}}
+            {{> theme_zuum/frontpage/block07/block07_1s }}
+        {{/block07slide}}
+        {{^block07slide}}
+            {{> theme_zuum/frontpage/block07/block07_1 }}
+        {{/block07slide}}   
+    {{/block07desing1}}          
+    {{#block07desing2}}
+        {{#block07slide}}
+            {{> theme_zuum/frontpage/block07/block07_2s }}
+        {{/block07slide}}
+        {{^block07slide}}
+            {{> theme_zuum/frontpage/block07/block07_2 }}
+        {{/block07slide}} 
+    {{/block07desing2}}  
+    {{#block07button}}
+    <div class="btn-wrap d-md-flex justify-content-md-center">
+        <a class="btn btn-primary btn-lg px-4 me-md-2" href="{{block07buttonlink}}">
+            <span>
+                <small>{{block07button}}</small> 
+                <small>{{block07button}}</small>
+            </span>
+        </a>
+    </div>
+    {{/block07button}}
+</section>
+{{/block07enabled}}

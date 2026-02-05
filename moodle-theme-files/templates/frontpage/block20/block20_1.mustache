@@ -1,0 +1,107 @@
+{{!
+    This file is part of Moodle - http://moodle.org/
+
+    Moodle is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    Moodle is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
+}}
+<!-- Footer -->
+<div class="footer-block">
+    <div class="container">
+        <footer class="row py-5">
+            <div class="footer-widget col col-lg-3 col-md-6 col-sm-6 mb-3 wow fadeInLeft">
+                <a href="/" class="site-link d-flex align-items-center mb-3 text-decoration-none">
+                    {{#block20logo}}
+                        <img width="auto" max-height="32" src="{{block20logo}}" alt="{{sitename}}">
+                    {{/block20logo}}
+                    {{^block20logo}}
+                            {{#pix}}graduation-cap-solid, theme_zuum{{/pix}}
+                            <span>
+                                {{#block20col1header}}{{{block20col1header}}}{{/block20col1header}}
+                                {{^block20col1header}}{{sitename}}{{/block20col1header}}
+                            </span>
+                    {{/block20logo}}
+                </a>
+                <p>{{{block20col1caption}}}</p>
+                <ul class="social-links unordered-list">
+                    {{{block20social}}}
+                </ul>
+            </div>
+            <div class="col-lg-2 col-md-3 col-sm-4 wow fadeInUp">
+                <div class="footer-widget col mb-3">
+                    <h5 class="footer-widget-title">{{{block20col2header}}}</h5>
+                    <ul class="nav flex-column">
+                        {{{block20col2links}}}
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-3 col-sm-4 wow fadeInUp">
+                <div class="footer-widget col mb-3">
+                    <h5 class="footer-widget-title">{{{block20col3header}}}</h5>
+                    <ul class="nav flex-column">
+                        {{{block20col3links}}}
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-3 col-sm-4 wow fadeInUp">
+                <div class="footer-widget col mb-3">
+                <h5 class="footer-widget-title">{{{block20col4header}}}</h5>
+                <ul class="nav flex-column">
+                    {{{block20col4links}}}
+                </ul>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6 wow fadeInUp">
+                <div class="footer-widget col mb-3">
+                    <h5 class="footer-widget-title">{{{block20col5header}}}</h5>
+                        <div class="contact-item d-flex align-items-center">
+                            <div class="item-icon">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <div class="item-content">
+                                <p class="mb-0">{{block20col5address}}</p>
+                            </div>
+                        </div>
+                        <div class="contact-item d-flex align-items-center">
+                            <div class="item-icon">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                            <div class="item-content">
+                                {{{block20col5phone}}}
+                            </div>
+                        </div>
+                        <div class="contact-item d-flex align-items-center">
+                            <div class="item-icon">
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                            <div class="item-content">
+                                {{{block20col5email}}}
+                            </div>
+                        </div>
+                </div>
+            </div>
+        </footer>
+        <div class="copyright-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 text-center d-flex justify-content-center align-items-center">
+                        {{> theme_zuum/frontpage/setup-button }} 
+                        <div class="copyright-text">
+                            {{{block20copyright}}}
+                        </div>
+                    </div>
+                </div>    
+            </div>    
+        </div>
+    </div>
+</div>
+<!-- Footer End -->

@@ -1,0 +1,149 @@
+<div class="almond-page-content">
+    <!-- Header Banner -->
+    <section class="almond-block page-banner">
+        <div class="rounded-3">
+            <div class="page-banner-content">
+                <div class="container">
+                    <div class="banner-image-1" style="background-image:url({{page06img}});">                   
+                        <div class="row align-items-center">
+                            <div class="col-lg-8">
+                                <ul class="page-breadcrumb unordered-list">
+                                    <li>
+                                        <a href="?">{{#str}}home, moodle {{/str}}</a>
+                                    </li>
+                                    <li>
+                                        {{#str}}contactus, tool_brickfield {{/str}}
+                                    </li>
+                                    <li>
+                                        {{page06navbar}}
+                                    </li>
+                                </ul>
+                                <h2 class="banner-big-title">{{page06header}}</h2>
+                                <div class="banner-description">
+                                    {{{page06caption}}}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Header Banner End -->
+    <!-- Contact -->
+    {{#page06s1enabled}}
+    <section class="zuum-contact-page">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5 p-3 mb-5">
+                    <div class="pe-lg-5">
+                        <div class="section-heading">
+                            <h2>{{page06s1header}}</h2>
+                            <span class="mb-0">{{page06s1caption}}</span>
+                        </div>
+                        <div class="contact-info-icon">
+                            <div class="contact-icon">
+                                <i class="fa-solid fa-phone-flip"></i>
+                            </div>
+                            <div class="contact-content">
+                                <h3 class="contact-title">{{#str}}phone, moodle {{/str}}</h3>
+                                <p class="mb-0">{{page06s1phone}}</p>
+                            </div>
+                        </div>
+                        <div class="contact-info-icon">
+                            <div class="contact-icon">
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                            <div class="contact-content">
+                                <h3 class="contact-title">{{#str}}email, moodle {{/str}}</h3>
+                                <p class="mb-0">{{{page06s1email}}}</p>
+                            </div>
+                        </div>
+                        <div class="contact-info-icon">
+                            <div class="contact-icon">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <div class="contact-content">
+                                <h3 class="contact-title">{{#str}}location, moodle {{/str}}</h3>
+                                <p class="mb-0">{{{page06s1location}}}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-7">
+                    <div class="gmap-canvas">
+                        <iframe id="gmap-canvas-iframe" src="{{page06s1maplink}}"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    {{/page06s1enabled}}
+    <!-- Contact End -->
+    <!-- Contact Form -->
+    {{#page06s2enabled}}
+    <section class="almond-block zuum-contact-form">
+        <div class="container">
+            <div class="row">
+                <div class="contact-form-items col-lg-12">
+                    <h3 class="contact-form-title text-center">{{page06s2header}}</h3>
+                    <div class="contact-form">
+                        <form action="./user/contactsitesupport.php" method="post"
+                            accept-charset="utf-8" class="mform"
+                            data-boost-form-errors-enhanced="1">
+                            <div style="display: none;">
+                                <input name="sesskey" type="hidden" value="{{sesskey}}">
+                                <input name="_qf__core_user_form_contactsitesupport_form" type="hidden" value="1">
+                            </div>
+                            <div class="row justify-content-center">
+                                <div class="col-lg-12">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="input-group mb-3">
+                                                <input type="text" name="name" placeholder="{{#str}}fullname, moodle{{/str}}"
+                                                    class="form-control form-control-custom style_2" autocomplete="off">
+                                                <i class="fa-solid fa-user-large"></i>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="input-group mb-3">
+                                                <input type="email" name="email" placeholder="{{#str}}email, moodle{{/str}}" 
+                                                    class="form-control form-control-custom style_2" autocomplete="off">
+                                                <i class="fa-solid fa-envelope"></i>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <div class="input-group mb-3">
+                                                <input type="text"  name="subject" placeholder="{{#str}} subject, core {{/str}}"
+                                                class="form-control form-control-custom style_2" autocomplete="off">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <div class="input-group mb-3">
+                                                <textarea rows="5" name="message" placeholder="{{#str}}writeamessage, message{{/str}}"
+                                                    class="form-control form-control-custom style_2" autocomplete="off"></textarea>
+                                                <i class="fa-solid fa-pencil"></i>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <button type="submit" name="submit" class="btn-wrap d-grid d-md-flex justify-content-md-start btn btn-dark">
+                                                {{#str}}sendmessage, message{{/str}}
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    {{/page06s2enabled}}
+    <!-- Contact Form End -->
+    <!-- Brands -->
+    {{#block19enabled}}
+       {{> theme_zuum/frontpage/block19/block19_1s }}                   
+    {{/block19enabled}}
+    <!-- Brands End -->
+</div>

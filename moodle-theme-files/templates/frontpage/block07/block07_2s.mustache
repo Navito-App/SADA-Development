@@ -1,0 +1,149 @@
+{{!
+    This file is part of Moodle - http://moodle.org/
+
+    Moodle is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    Moodle is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
+}}
+<!-- Courses -->
+<div class="container">
+    <div class="row text-start text-dark wow fadeInUp">
+        <div class="col col-lg-7">
+            <div class="heading-text">
+                {{block07header}}
+            </div>
+            <h2 class="heading-description">
+                {{{block07caption}}}
+            </h2>
+        </div>
+        <div class="col col-lg-5 d-lg-flex d-none justify-content-end">
+            <div class="carousel-arrow">
+                <button type="button" class="course_left_arrow">
+                    <i class="fa-solid fa-long-arrow-left"></i>
+                </button> 
+                <button type="button" class="course_right_arrow">
+                    <i class="fa-solid fa-long-arrow-right"></i>
+                </button>
+            </div>
+        </div>    
+    </div>
+    <div class="row">
+        <div class="carousel-arrow-sm d-xs-block d-sm-block d-md-block d-lg-none">
+            <button type="button" class="course_left_arrow"><i class="fa-solid fa-long-arrow-left"></i></button>
+            <button type="button" class="course_right_arrow"><i class="fa-solid fa-long-arrow-right"></i></button>
+        </div>
+        <div class="swiper swiper-course">
+            <div class="swiper-wrapper">
+                {{#block07}}
+                <div class="swiper-slide">
+                    <div class="block07-2 card course-card h-100"
+                        {{# block07imgenabled }}
+                        style= "background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 50, 0.8) ) 
+                        {{# imgurl }},url('{{{imgurl}}}'){{/ imgurl }}; background-size: cover;"
+                        {{/ block07imgenabled }}
+                        {{^ block07imgenabled }}
+                        style= "background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 50, 0.8)); background-size: cover;"
+                        {{/ block07imgenabled }}>
+                        <div class="card-content">
+                            <div class="d-flex align-items-center justify-content-between mb-3">
+                                <ul class="course-category-list unordered-list">
+                                    <li>
+                                        <a href="{{categorylink}}" data-bs-toggle="tooltip" data-placement="top" 
+                                            title="{{#str}}category, moodle{{/str}}">
+                                            {{{categoryName}}}
+                                        </a>
+                                    </li>
+                                </ul>
+                                {{#block07priceshow}}
+                                <div class="course-price">
+                                    <span class="sale-price">{{cost}} {{currency}}</span>
+                                </div>
+                                {{/block07priceshow}}
+                            </div>
+                            <h4 class="card-title text-truncate-3">
+                                <a href="{{courselink}}">
+                                    {{#block07shortname}}{{{shortname}}}{{/block07shortname}}
+                                    {{#block07fullname}}{{{fullname}}}{{/block07fullname}}
+                                </a>
+                            </h4>
+                            <a class="btn-unfill pt-2" href="{{courselink}}">
+                                <span class="btn-text">{{#str}}viewcourse, block_timeline{{/str}}</span>
+                                <span class="btn-icon">
+                                    <i class="fa-solid fa-long-arrow-right"></i>
+                                    <i class="fa-solid fa-long-arrow-right"></i>
+                                </span>
+                            </a>
+                            <div class="row g-0 course-info-list unordered-list text-white pt-4">
+                                <div class="col-md-3">
+                                    <div class="teacher-info d-inline" data-bs-toggle="tooltip" data-placement="right" 
+                                        title="{{#str}}defaultcourseteacher, moodle{{/str}} : {{{teachername}}}">
+                                        {{#userpictureURL}}
+                                        <a href="{{teacherlink}}">
+                                            <img src="{{userpictureURL}}" alt="teacher">
+                                        </a>
+                                        {{/userpictureURL}}
+                                    </div>
+                                </div>
+                                <div class="col-md-9 text-end">
+                                    <i class="fa fa-user"></i> 
+                                    <span data-bs-toggle="tooltip" data-placement="top" 
+                                        title="{{#str}}existingstudents, moodle{{/str}}">
+                                        {{studentscount}}
+                                    </span>
+                                    <i class="fa fa-calendar ms-2"></i> 
+                                    <span data-bs-toggle="tooltip" data-placement="top" 
+                                        title="{{#str}}lastmodified, moodle{{/str}}">
+                                        {{update}}
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {{/block07}}
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Courses End -->
+<script>
+  const swipercourse = new Swiper('.swiper-course', {
+    // Optional parameters
+    loop: true,
+    autoplay: {
+        delay: 5000,
+    },
+    slidesPerView: 1,
+    spaceBetween: 20,
+    // Navigation arrows
+    navigation: {
+        nextEl: '.course_right_arrow',
+        prevEl: '.course_left_arrow',
+    },
+    // Responsive breakpoints
+    breakpoints: {
+        // when window width is >= 320px
+      768: {
+        slidesPerView: 1,
+        spaceBetween: 40
+      },
+      992: {
+        slidesPerView: 2,
+        spaceBetween: 30
+      },
+      1200: {
+        slidesPerView: 3,
+        spaceBetween: 30
+      },
+    }
+  });
+</script>

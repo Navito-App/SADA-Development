@@ -1,0 +1,51 @@
+/* Body color.*/
+body {
+    --color-dl-white-bsc: #{$body-color};
+    --color-dl-bg-black: #{$body-bg};
+    /*color: var(--color-dl-white-bsc);
+    background-color: var(--color-dl-bg-black); */
+}
+#theme-info {
+    position: relative;
+    color: transparent;
+    font-size: 9px;
+    z-index: -1;
+    margin-top: -15px;
+}
+/* Theme info end */
+/* Focus */
+.aabtn.focus,
+.aabtn:focus,
+.btn-link.focus,
+.btn-link:focus,
+.nav-link.focus,
+.nav-link:focus,
+.editor_atto_toolbar button.focus,
+.editor_atto_toolbar button:focus,
+.editor_atto_toolbar .atto_toolbar_row.focus,
+.editor_atto_toolbar .atto_toolbar_row:focus,
+[role="button"].focus,
+[role="button"]:focus,
+.list-group-item-action.focus,
+.list-group-item-action:focus,
+input[type="checkbox"].focus,
+input[type="checkbox"]:focus,
+input[type="radio"].focus,
+input[type="radio"]:focus,
+input[type="file"].focus,
+input[type="file"]:focus,
+input[type="image"].focus,
+input[type="image"]:focus,
+.sr-only-focusable-focusable.focus,
+.sr-only-focusable-focusable:focus,
+a.dropdown-toggle.focus,
+a.dropdown-toggle:focus,
+.moodle-dialogue-base .closebutton.focus,
+.moodle-dialogue-base .closebutton:focus,
+button.close.focus, button.close:focus,
+.form-autocomplete-selection.focus,
+.form-autocomplete-selection:focus,
+[role="treeitem"]:not([aria-expanded="true"]).focus,
+[role="treeitem"]:not([aria-expanded="true"]):focus {
+    box-shadow: none;
+}

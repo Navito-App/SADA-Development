@@ -1,0 +1,58 @@
+{{!
+    This file is part of Moodle - http://moodle.org/
+
+    Moodle is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    Moodle is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
+}}
+<!-- Icon box -->
+<div class="almond-block iconbox-block">
+    <div class="container">
+        <div class="text-center text-dark wow fadeInUp">
+            <div class="heading-text">
+                {{block02header}}
+            </div>
+            <h2 class="heading-description">
+                {{{block02explanation}}}
+            </h2>
+        </div>
+        <div class="row g-4">
+            {{#block02}}
+            <div class="{{{count}}} wow fadeInRight" data-wow-delay=".2s">
+                <div class="card iconbox-card rounded-3 p-3"
+                    {{#block02img}}
+                    style= "background-image: url({{block02img}}); background-size: cover;"
+                    {{/block02img}}>
+                    <div class="card-body text-dark">
+                        <div class="main-icon">
+                            <i class="{{icon}} mb-3"></i>
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title text-dark">{{{title}}}</h3>
+                            <p class="mt-3 text-dark">
+                                {{{caption}}}
+                            </p>
+                            <a class="iconbox-btn" href="{{{buttonurl}}}">
+                                <span class="btn-text">{{{button}}}</span>
+                                <span class="btn-icon">
+                                    <i class="fa-solid fa-long-arrow-right"></i>
+                                    <i class="fa-solid fa-long-arrow-right"></i>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {{/block02}}
+        </div>
+    </div>
+</div>
